@@ -1,0 +1,21 @@
+# Python
+.vscode/
+__pycache__/
+*.py[cod]
+*$py.class
+
+.hypothesis/
+.pytest_cache/
+
+.ipynb_checkpoints
+
+
+# C++
+*.slo
+*.lo
+*.o
+*.obj
+
+*.exe
+*.out
+*.app
