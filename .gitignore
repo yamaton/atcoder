@@ -19,3 +19,8 @@ __pycache__/
 *.exe
 *.out
 *.app
+
+# programming contests
+*.in
+*.out
+*.txt
