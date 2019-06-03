@@ -25,7 +25,6 @@ def solve(s, t):
     return "".join(iterable)
 
 
-
 def solve2(s, t):
     dp = collections.defaultdict(int)
     for i, cs in enumerate(s):
@@ -34,7 +33,6 @@ def solve2(s, t):
                 dp[i + 1, j + 1] = dp[i, j] + 1
             else:
                 dp[i + 1, j + 1] = max(dp[i, j + 1], dp[i + 1, j])
-
 
     # from uwi's implementation
     i, j = len(s), len(t)
@@ -52,11 +50,8 @@ def solve2(s, t):
     return "".join(res)
 
 
-
 seq1 = input().strip()
 seq2 = input().strip()
 res = solve2(seq1, seq2)
 print(res)
-
-
 
