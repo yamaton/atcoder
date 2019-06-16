@@ -1,12 +1,14 @@
 #include <algorithm>
-#include <assert.h>
 #include <bitset>
+#include <cassert>
 #include <cmath>
 #include <complex>
 #include <deque>
 #include <functional>
+#include <iomanip>
 #include <iostream>
 #include <map>
+#include <numeric>
 #include <queue>
 #include <set>
 #include <string>
@@ -19,10 +21,10 @@ using namespace std;
 #define PB(x) push_back(x)
 #define EB(x) emplace_back(x)
 #define DEBUG(x) cout << (#x) << ": " << (x) << endl
-#define DEBUG_VEC(v)                \
-    cerr << #v << ": ";             \
-    REP(__i, (v).size())            \
-        cerr << ((v)[__i]) << ", "; \
+#define DEBUG_VEC(v)            \
+    cerr << #v << ": ";         \
+    REP(__i, (v).size())        \
+    cerr << ((v)[__i]) << ", "; \
     cerr << endl
 
 typedef long long ll;
