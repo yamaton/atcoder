@@ -16,10 +16,8 @@
 #include <vector>
 using namespace std;
 
-#define REP(i, n) for (int i = 0; i < n; ++i)
+#define REP(i, n) for (int i = 0; i < (n); ++i)
 #define ALL(x) (x).begin(), (x).end()
-#define PB(x) push_back(x)
-#define EB(x) emplace_back(x)
 #define DEBUG(x) cout << (#x) << ": " << (x) << endl
 #define DEBUG_VEC(v)            \
     cerr << #v << ": ";         \
