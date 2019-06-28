@@ -1,3 +1,8 @@
+/* 
+    AtCoder 129 E
+        - 桁DPの練習
+        - バイナリで分かれるのなら、１次元ヴェクタを２つ持つほうが良いと思う
+ */
 #include <algorithm>
 #include <bitset>
 #include <cassert>
