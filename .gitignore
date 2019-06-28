@@ -20,6 +20,13 @@ __pycache__/
 *.out
 *.app
 
+# F#
+.ionide/
+*.dll
+
+# Java related
+*.jar
+
 # programming contests
 *.in
 *.out
