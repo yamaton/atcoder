@@ -18,7 +18,7 @@ using namespace std;
 
 #define REP(i, n) for (int i = 0; i < (n); ++i)
 #define ALL(x) (x).begin(), (x).end()
-#define DEBUG(x) cout << (#x) << ": " << (x) << endl
+#define DEBUG(x) cerr << (#x) << ": " << (x) << endl
 #define DEBUG_VEC(v)            \
     cerr << #v << ": ";         \
     REP(__i, (v).size())        \
