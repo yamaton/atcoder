@@ -27,6 +27,11 @@ fn fromdigits(xs: &[u32]) -> u64 {
     xs.iter().fold(0, |acc, &x| 10 * acc + x as u64)
 }
 
+fn fromdigits2(xs: &[u32]) -> String {
+    let v: Vec<String> = xs.iter().map(|x| x.to_string()).collect();
+    v.join("")
+}
+
 fn main() {
     let x = 3424;
     let y = 4173;
