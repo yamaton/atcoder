@@ -1,25 +1,43 @@
 import pathlib
+import string
 import sys
 import shutil
 import fire
 
+TO_EXT = {
+    "c++": ".cc",
+    "cpp": ".cc",
+    ".cpp": ".cc",
+    "rust": ".rs",
+    "python": ".py",
+    "f#": ".fsx",
+    "fsharp": ".fsx",
+    "fs": ".fsx",
+}
 
-def prepare_template(s, count=4, ext=".cc"):
+def get_ext(lang):
+    if lang in TO_EXT:
+        lang = TO_EXT[lang]
+    ext = lang if lang.startswith(".") else "." + lang
+    return ext
+
+
+def prepare_template(s, count=4, lang=".rs"):
     p = pathlib.Path(s)
-    if p.exists():
-        print(f"{s} already exists!")
-        sys.exit()
-
+    p.mkdir(exist_ok=True)
+    ext = get_ext(lang)
     src = p.parent / "templates" / ("template" + ext)
-    assert src.exists(), "template file not found!"
+    assert src.exists(), f"template file not found! {src}"
 
-    p.mkdir()
     print(f"Created {p}")
-    problems = "abcdef"[:count]
+    problems = string.ascii_lowercase[:count]
     for c in problems:
         dst = p / (s + "_" + c + ext)
-        shutil.copy2(src, dst)
-        print(f"Copied from {src} to {dst}")
+        if dst.exists():
+            print(f"{dst} already exists. skipping...")
+        else:
+            shutil.copy2(src, dst)
+            print(f"Copied from {src} to {dst}")
     
 
 
