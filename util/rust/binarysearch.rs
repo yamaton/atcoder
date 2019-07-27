@@ -18,9 +18,9 @@ fn binary_search<T: Ord>(seq: &[T], key: T) -> usize
     //     let ans = (seq[index] >= key);
     //     ans
     // }
-    let is_ok = |index: i32| seq[index as usize] >= key;
-    let mut ng: i32 = -1;
-    let mut ok: i32 = seq.len() as i32;
+    let is_ok = |index: i64| key <= seq[index as usize];
+    let mut ng: i64 = -1;
+    let mut ok: i64 = seq.len() as i64;
 
     while (ok - ng).abs() > 1 {
         let mid = (ok + ng) / 2;
