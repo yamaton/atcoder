@@ -16,6 +16,7 @@ TO_EXT = {
 }
 
 def get_ext(lang):
+    lang = lang.lower()
     if lang in TO_EXT:
         lang = TO_EXT[lang]
     ext = lang if lang.startswith(".") else "." + lang
